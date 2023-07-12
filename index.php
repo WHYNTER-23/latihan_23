@@ -1,5 +1,15 @@
 <?php
+session_start();
 $is_login = 0;
+if (isset($_POST['jwd_username'])) {
+  $username = $_SESSION['jwd_username'];
+  $is_login = 1;
+}
+include 'conn.php';
+
+echo "<pre>";
+var_dump($_SESSION);
+echo "</pre>";
 ?>
 
 <!DOCTYPE html>
